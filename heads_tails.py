@@ -124,7 +124,7 @@ else:
 back_surface = pygame.Surface((1280,720))
 back_surface.fill('grey')
 
-text_font = pygame.font.Font('hand_cricket\PRISTINA.TTF',100)
+text_font = pygame.font.Font(r'D:\New folder(to save)\code saves\hand_cricket\gallery\fonts_py\PRISTINA.TTF',100)
 
 win_text_surface = text_font.render('You won the toss :D', True, (255,215,0))
 lose_text_surface = text_font.render('You lost :( Better Luck next time!', True, (255,215,0))
@@ -196,11 +196,15 @@ def display_tkinter_window():
 
 def bat_selected():
     print("You chose to BAT")
-    # Add your logic for when the user chooses to BAT
+    pygame.quit()
+    window.destroy()
+    window.destroy()
 
 def bowl_selected():
     print("You chose to BOWL")
-    # Add your logic for when the user chooses to BOWL
+    pygame.quit()
+    window.destroy()
+    window.destroy()
 
 # Your Pygame loop
 def pygame_loop():
@@ -234,9 +238,11 @@ def pygame_loop():
     keys = pygame.key.get_pressed()
     if keys[pygame.K_RETURN]:
         if continuity == 1:
+            window.destroy()
             display_tkinter_window()
             window.destroy()
         elif continuity == 0:
+            window.destroy()
             window.destroy()
     clock.tick(120)
     pygame.display.flip()

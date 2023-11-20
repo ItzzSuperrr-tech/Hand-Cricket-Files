@@ -1,4 +1,4 @@
-def hand_cricket():
-    pass
+import login_register
 
-if __main__
+import heads_tails
+import try2
