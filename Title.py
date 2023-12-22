@@ -1,15 +1,10 @@
 import pygame
 import sys
 import math
-import tkinter as Tk
 
 #General Setup
 pygame.init()
 clock = pygame.time.Clock()
-
-window = Tk.Tk()
-window.title('press buttons :)')
-window.geometry("0x0")
 
 # Game Screen
 screen_width = 1280
@@ -42,10 +37,6 @@ r = 100
 theta = 0
 
 while True:
-    # global y_pos
-    # global theta
-    # global center
-    # global r
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:

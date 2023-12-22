@@ -7,29 +7,15 @@ class CoinH(pygame.sprite.Sprite):
     def __init__(self, pos_x, pos_y):
         super().__init__()
         self.flip_animation = False
-        self.sprites = []  # Your coin sprite loading code...
+        self.sprites = []  # Coin sprite loading code...
 
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-4.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-5.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-6.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-7.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-8.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-9.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-10.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-11.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-12.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-13.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-14.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-15.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-16.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-17.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-18.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-19.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-20.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-1.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-2.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-3.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-4.png'))
+        for i in range(4, 21):
+            self.sprites.append(pygame.image.load(fr'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-'+str(i)+'.png'))
+
+        for i in range(4, 5):
+            self.sprites.append(pygame.image.load(
+                r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-'+str(i)+'.png'
+            ))
 
         self.current_sprite = 0
         self.image = self.sprites[self.current_sprite]
@@ -56,27 +42,13 @@ class CoinT(pygame.sprite.Sprite):
         self.flip_animation = False
         self.sprites = []  # Your coin sprite loading code...
 
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-14.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-15.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-16.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-17.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-18.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-19.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-20.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-1.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-2.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-3.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-4.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-5.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-6.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-7.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-8.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-9.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-10.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-11.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-12.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-13.png'))
-        self.sprites.append(pygame.image.load(r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-14.png'))
+        for i in range(14, 21):
+            self.sprites.append(pygame.image.load(fr'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-'+str(i)+'.png'))
+
+        for i in range(1, 15):
+            self.sprites.append(pygame.image.load(
+                r'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\ani2\coin-'+str(i)+'.png'
+            ))
 
         self.current_sprite = 0
         self.image = self.sprites[self.current_sprite]
@@ -150,7 +122,6 @@ def Tails():
 
 window = Tk.Tk()
 window.title('press buttons :)')
-window.geometry("350x160")
 window.minsize(350, 160)
 window.maxsize(350, 160)
 
@@ -174,13 +145,13 @@ coin_button.grid(row=2, column=1, pady=5,)
 
 # Second window
 def display_tkinter_window():
-    window = Tk.Tk()
-    window.title('Choose Bat or Bowl')
-    window.geometry("350x160")
-    window.minsize(350, 160)
-    window.maxsize(350, 160)
+    global window2
+    window2 = Tk.Tk()
+    window2.title('Choose Bat or Bowl')
+    window2.minsize(350, 160)
+    window2.maxsize(350, 160)
 
-    frame = Tk.Frame(window, padx=4, pady=2, bg='grey', borderwidth='15')
+    frame = Tk.Frame(window2, padx=4, pady=2, bg='grey', borderwidth='15')
     frame.pack(padx=10, pady=10,)
 
     label = Tk.Label(frame, text='Choose Bat or Bowl', font='comicsans 19 bold')
@@ -192,19 +163,19 @@ def display_tkinter_window():
     bowl_button = Tk.Button(frame, text="BOWL", command=bowl_selected, relief='ridge', fg='white', bg='black', font='ink_free')
     bowl_button.grid(row=2, column=1, pady=5)
 
-    window.mainloop()
+    window2.mainloop()
 
 def bat_selected():
     print("You chose to BAT")
     pygame.quit()
-    window.destroy()
-    window.destroy()
+    window2.destroy()
+    sys.exit()
 
 def bowl_selected():
     print("You chose to BOWL")
     pygame.quit()
-    window.destroy()
-    window.destroy()
+    window2.destroy()
+    sys.exit()
 
 # Your Pygame loop
 def pygame_loop():
