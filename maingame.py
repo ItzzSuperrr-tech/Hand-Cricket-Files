@@ -108,52 +108,6 @@ def maingame():
 
     print('Game Over')
 
-    # def play_inning(player_number):
-    # # Logic for runs during the inning
-    # runs = 0
-
-    # while True:
-    #     for event in pygame.event.get():
-    #         if event.type == pygame.QUIT:
-    #             pygame.quit()
-    #             sys.exit()
-
-    #     screen.blit(back_surface, (0, 0))
-    #     screen.blit(classroom_surface, (100, 0))
-    #     screen.blit(title_surface, (206, 142))
-    #     screen.blit(Welcome_surface, (356, 242))
-    #     screen.blit(wdl_surface, (656, 242))
-    #     runs_surface = text_font.render(f'Runs: {runs}', True, (00, 200, 200))
-    #     screen.blit(runs_surface, (206, 303))
-    #     screen.blit(made_by_surface, (656, 303))
-
-    #     Player_sprites[player_number].draw(screen)
-    #     Player_sprites[player_number].update(0.25)
-    #     Computer_sprites[random_num].draw(screen)
-    #     Computer_sprites[random_num].update(0.25)
-
-    #     clock.tick(120)
-    #     pygame.display.flip()
-
-    #     keys = pygame.key.get_pressed()
-
-    #     # Simulate the batting logic based on key presses
-    #     if keys[pygame.K_1]:
-    #         runs += 1
-    #     elif keys[pygame.K_2]:
-    #         runs += 2
-    #     elif keys[pygame.K_3]:
-    #         runs += 3
-    #     elif keys[pygame.K_4]:
-    #         runs += 4
-    #     elif keys[pygame.K_6]:
-    #         runs += 6
-
-    #     # Check for the end of the inning (when runs >= 10)
-    #     if runs >= 10:
-    #         break
-
-    # return runs
 
     for i in range(1, 11):
         Player_sprites[i] = pygame.sprite.Group()
@@ -180,7 +134,7 @@ def maingame():
     made_by_surface = text_font.render('Made by - Mahit Shah', True, (153, 153, 0))
     runs_surface = text_font.render('Runs: {runs_sum}', True, (00, 200, 200))
 
-    classroom_surface = pygame.image.load(r"D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\blank_board_class.png").convert_alpha()
+    classroom_surface = pygame.image.load(r"D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\blank_board_class.png").convert_alpha()  
 
     # tkinter code
     def random_num():

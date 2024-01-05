@@ -13,19 +13,19 @@ class player(pygame.sprite.Sprite):
 
         for i in range(1, 9):
             animate.sprites.append(pygame.image.load(
-                fr'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\sprites for animation\player('+str(i)+').png'
+                fr'gallery\sprites\sprites for animation\player('+str(i)+').png'
             ))
         for i in range(8, 0, -1):
             animate.sprites.append(pygame.image.load(
-                fr'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\sprites for animation\player('+str(i)+').png'
+                fr'gallery\sprites\sprites for animation\player('+str(i)+').png'
             ))
         for i in range(1, 9):
             animate.sprites.append(pygame.image.load(
-                fr'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\sprites for animation\player('+str(i)+').png'
+                fr'gallery\sprites\sprites for animation\player('+str(i)+').png'
             ))
 
         animate.sprites.append(pygame.image.load(
-            fr'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\hand_sign_{animate.number}.png'
+            fr'gallery\sprites\hand_sign_{animate.number}.png'
         ))
 
         animate.current_sprite = 0
@@ -56,19 +56,19 @@ class computer(pygame.sprite.Sprite):
 
         for i in range(1, 9):
             animate.sprites.append(pygame.image.load(
-                fr'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\sprites for animation\player('+str(i)+').png'
+                fr'gallery\sprites\sprites for animation\player('+str(i)+').png'
             ))
         for i in range(8, 0, -1):
             animate.sprites.append(pygame.image.load(
-                fr'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\sprites for animation\player('+str(i)+').png'
+                fr'gallery\sprites\sprites for animation\player('+str(i)+').png'
             ))
         for i in range(1, 9):
             animate.sprites.append(pygame.image.load(
-                fr'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\sprites for animation\player('+str(i)+').png'
+                fr'gallery\sprites\sprites for animation\player('+str(i)+').png'
             ))
 
         animate.sprites.append(pygame.image.load(
-            fr'D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\hand_sign_{animate.number}.png'
+            fr'gallery\sprites\hand_sign_{animate.number}.png'
         ))
 
         animate.current_sprite = 0
@@ -124,8 +124,8 @@ for i in range(1, 11):
 back_surface = pygame.Surface((1280, 720))
 back_surface.fill('grey')
 
-title_font = pygame.font.Font(r'D:\New folder(to save)\code saves\hand_cricket\gallery\fonts_py\title_chalk.otf',90)
-text_font = pygame.font.Font(r'D:\New folder(to save)\code saves\hand_cricket\gallery\fonts_py\ARLRDBD.TTF',35)
+title_font = pygame.font.Font(r'gallery\fonts_py\title_chalk.otf',90)
+text_font = pygame.font.Font(r'gallery\fonts_py\ARLRDBD.TTF',35)
 
 title_surface = title_font.render('Welcome to Hand Cricket', True, (100, 150, 200))
 Welcome_surface = text_font.render('User V/S Computer', True, (200, 00, 00))
@@ -133,9 +133,7 @@ wdl_surface = text_font.render('W/D/L  :  W/D/L', True, (200, 100, 00))
 made_by_surface = text_font.render('Made by - Mahit Shah', True, (153, 153, 0))
 runs_surface = text_font.render('Runs: {runs_sum}', True, (00, 200, 200))
 
-classroom_surface = pygame.image.load(r"D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\blank_board_class.png").convert_alpha()
-bench_surface = pygame.image.load(r"D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\bench(2).png").convert_alpha()   
-
+classroom_surface = pygame.image.load(r"gallery\sprites\blank_board_class.png").convert_alpha()
 # tkinter code
 def start_animation(i):
     global current1,current2,run_list,runs_sum
