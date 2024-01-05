@@ -1,6 +1,6 @@
 import pygame
 import sys
-import tkinter as Tk
+import tkinter as tk
 import random
 
 class CoinH(pygame.sprite.Sprite):
@@ -105,7 +105,7 @@ rect_win_surface = win_text_surface.get_rect(topleft = (310,0))
 rect_lose_surface = lose_text_surface.get_rect( topleft = (100,0))
 rect_con_surface = Continue_text_surface.get_rect(bottomleft = (5,720))
 
-# Tkinter code
+# tkinter code
 def Heads():
     coin.flip()
     window.x = 'Heads'
@@ -120,7 +120,7 @@ def Tails():
     pygame_loop()
     return True
 
-window = Tk.Tk()
+window = tk.Tk()
 window.title('press buttons :)')
 window.minsize(350, 160)
 window.maxsize(350, 160)
@@ -129,38 +129,38 @@ window.maxsize(350, 160)
 window.x = None
 
 #Frame
-frame = Tk.Frame(window, padx=4, pady=2, bg='grey', borderwidth='15')
+frame = tk.Frame(window, padx=4, pady=2, bg='grey', borderwidth='15')
 frame.pack(padx=10, pady=10,)
 
 # Labels
-label = Tk.Label(frame, text='Choose Heads or Tails', font='comicsans 19 bold')
+label = tk.Label(frame, text='Choose Heads or Tails', font='comicsans 19 bold')
 label.grid(row=0, column=0, columnspan=2, pady=10)
 
 # Button for starting the animation in Pygame
-coin_button = Tk.Button(frame, text="HEADS", command=Heads, relief='ridge', fg='white', bg='black', font='ink_free')
+coin_button = tk.Button(frame, text="HEADS", command=Heads, relief='ridge', fg='white', bg='black', font='ink_free')
 coin_button.grid(row=2, column=0, pady=5)
 
-coin_button = Tk.Button(frame, text="TAILS", command=Tails, relief='ridge', fg='white', bg='black', font='ink_free')
+coin_button = tk.Button(frame, text="TAILS", command=Tails, relief='ridge', fg='white', bg='black', font='ink_free')
 coin_button.grid(row=2, column=1, pady=5,)
 
 # Second window
 def display_tkinter_window():
     global window2
-    window2 = Tk.Tk()
+    window2 = tk.Tk()
     window2.title('Choose Bat or Bowl')
     window2.minsize(350, 160)
     window2.maxsize(350, 160)
 
-    frame = Tk.Frame(window2, padx=4, pady=2, bg='grey', borderwidth='15')
+    frame = tk.Frame(window2, padx=4, pady=2, bg='grey', borderwidth='15')
     frame.pack(padx=10, pady=10,)
 
-    label = Tk.Label(frame, text='Choose Bat or Bowl', font='comicsans 19 bold')
+    label = tk.Label(frame, text='Choose Bat or Bowl', font='comicsans 19 bold')
     label.grid(row=0, column=0, columnspan=2, pady=10)
 
-    bat_button = Tk.Button(frame, text="BAT", command=bat_selected, relief='ridge', fg='white', bg='black', font='ink_free')
+    bat_button = tk.Button(frame, text="BAT", command=bat_selected, relief='ridge', fg='white', bg='black', font='ink_free')
     bat_button.grid(row=2, column=0, pady=5)
 
-    bowl_button = Tk.Button(frame, text="BOWL", command=bowl_selected, relief='ridge', fg='white', bg='black', font='ink_free')
+    bowl_button = tk.Button(frame, text="BOWL", command=bowl_selected, relief='ridge', fg='white', bg='black', font='ink_free')
     bowl_button.grid(row=2, column=1, pady=5)
 
     window2.mainloop()

@@ -1,7 +1,7 @@
 import pygame
 import sys
-import tkinter as Tk
-import random as r
+import tkinter as tk
+import random
 
 # Animations
 class player(pygame.sprite.Sprite):
@@ -94,6 +94,10 @@ class computer(pygame.sprite.Sprite):
 pygame.init()
 clock = pygame.time.Clock()
 
+#Variables
+run_list_innings1 = []
+run_list_innings2 = []
+
 # Game Screen
 screen_width = 1280
 screen_height = 720
@@ -130,21 +134,20 @@ made_by_surface = text_font.render('Made by - Mahit Shah', True, (153, 153, 0))
 runs_surface = text_font.render('Runs: {runs_sum}', True, (00, 200, 200))
 
 classroom_surface = pygame.image.load(r"D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\blank_board_class.png").convert_alpha()
-bench_surface = pygame.image.load(r"D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\bench(2).png").convert_alpha()
-run_list = []
+bench_surface = pygame.image.load(r"D:\New folder(to save)\code saves\hand_cricket\gallery\sprites\bench(2).png").convert_alpha()   
 
-# Tkinter code
+# tkinter code
 def start_animation(i):
     global current1,current2,run_list,runs_sum
-    random_num = r.randrange(1,11)
+    random_num = random.randrange(1,11)
     Computer[random_num].start()
     Player[i].start()
-    run_list.append(i)
-    runs_sum = sum(run_list)
+    run_list_innings1.append(i)
+    runs_sum = sum(run_list_innings1)
     current1 = i
     current2 = random_num
 
-window = Tk.Tk()
+window = tk.Tk()
 window.title('Press Buttons :)')
 window.geometry("400x250")
 window.minsize(400, 250)
@@ -152,17 +155,17 @@ window.maxsize(400, 250)
 window.configure(bg='#F0F0F0')  # Set background color
 
 # Frame
-frame = Tk.Frame(window, padx=20, pady=20, bg='#D0D0D0',borderwidth=5, relief=Tk.GROOVE)
+frame = tk.Frame(window, padx=20, pady=20, bg='#D0D0D0',borderwidth=5, relief=tk.GROOVE)
 frame.pack(padx=10, pady=10)
 
 # Labels
-label = Tk.Label(frame, text='Choose Your Number',font=('Arial', 20, 'bold'), bg='#D0D0D0')
+label = tk.Label(frame, text='Choose Your Number',font=('Arial', 20, 'bold'), bg='#D0D0D0')
 label.grid(row=0, column=0, columnspan=5, pady=10)
 
 # Button for starting the animation in Pygame
 for row in range(2):
     for i in range(1, 6):
-        player_button = Tk.Button(frame,text=str(i + row*5),command=lambda i=i+row*5: start_animation(i),font=('Arial', 12),width=4,height=2)
+        player_button = tk.Button(frame,text=str(i + row*5),command=lambda i=i+row*5: start_animation(i),font=('Arial', 12),width=4,height=2)
         player_button.grid(row=row+1, column=i-1, pady=5)
 
 # Your Pygame loop
